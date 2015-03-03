@@ -1,0 +1,7 @@
+= simple_form_for @itune, :html => { :class => "form-horizontal" } do |f|
+  = f.input :name
+  = f.input :file, inline_label: true
+  .form-group
+    .col-sm-offset-3.col-sm-9
+      = f.submit nil, :class => 'btn btn-primary'
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), itunes_path, :class => 'btn btn-default'

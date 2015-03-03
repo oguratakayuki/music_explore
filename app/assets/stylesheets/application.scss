@@ -1,0 +1,15 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootswatch/superhero/variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootswatch/superhero/bootswatch";
+// Whatever application styles you have go last
+.page-header {
+  border-bottom: 1px solid #ebebeb;
+  margin: 10px 0 21px;
+  padding-bottom: 9.5px;
+}
+h1, .h1 {
+  font-size: 25px;
+}

@@ -22,6 +22,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem "slim-rails"
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'bootstrap-sass-extras'
+gem 'bootswatch-rails'
+gem 'carrierwave'
+gem 'simple_form'
+gem "delayed_job"
+gem "delayed_job_active_record"
+gem "daemons"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -33,13 +42,26 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-rescue'
+  gem 'faker'
+  gem 'rspec-rails'
+  # Read: https://github.com/thoughtbot/factory_girl
+  gem 'factory_girl_rails'
 end
+gem "bootstrap-switch-rails"
+gem 'toastr-rails'
+
+group :development do
+  # Read: https://github.com/rails/spring
+  gem 'spring'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'rubocop', require: false
+  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'scss-lint', require: false
+end
+
 
