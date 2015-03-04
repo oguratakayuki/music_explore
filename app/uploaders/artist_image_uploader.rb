@@ -1,0 +1,2 @@
+class ArtistImageUploader < ApplicationUploader
+end

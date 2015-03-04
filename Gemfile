@@ -27,10 +27,12 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'bootstrap-sass-extras'
 gem 'bootswatch-rails'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'simple_form'
 gem "delayed_job"
 gem "delayed_job_active_record"
 gem "daemons"
+gem 'lastfm'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

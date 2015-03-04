@@ -4,14 +4,8 @@ require 'csv'
 
 class Itune < ActiveRecord::Base
   mount_uploader :file, ItuneXmlUploader
-  after_save :parse_xml
+  after_save 'delay.parse_xml'
   def parse_xml
-    #records = []
-    #tmp_record = nil;
-    #file =  open(Itune.last.file.path)
-    #xml = Nokogiri::XML(file)
-    #data = Hash.from_xml(xml)
-
     open(file.path, 'r').each_line do |line|
       line.strip!
       line =~ %r!<string>(.*)</string>!

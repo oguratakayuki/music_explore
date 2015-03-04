@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303110711) do
+ActiveRecord::Schema.define(version: 20150304100117) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name",       limit: 255
+    t.integer  "mb_id",      limit: 4
     t.string   "image",      limit: 255
     t.text     "detail",     limit: 65535
     t.datetime "created_at",               null: false
