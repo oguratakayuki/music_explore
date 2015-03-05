@@ -17,7 +17,7 @@ class Itune < ActiveRecord::Base
           #tmp_record.name = str.toutf8
         when %r!^<key>Artist</key>!
           #tmp_record.artist = str.toutf8
-          Artist.find_or_create_by(name: str.toutf8)
+          Artist.new_from_lastfm(name: str.toutf8)
         when %r!^<key>Album</key>!
           #tmp_record.album = str.toutf8
         when %r!^<key>Location</key>!
