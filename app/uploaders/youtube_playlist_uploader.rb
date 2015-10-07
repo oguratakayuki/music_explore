@@ -1,0 +1,2 @@
+class YoutubePlaylistUploader < ApplicationUploader
+end

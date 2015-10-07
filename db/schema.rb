@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006224956) do
+ActiveRecord::Schema.define(version: 20151007141037) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20151006224956) do
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "file",        limit: 255
   end
 
 end

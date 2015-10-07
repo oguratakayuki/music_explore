@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :youtube_playlists
+
   resources :itunes
 
   get 'top/index'
