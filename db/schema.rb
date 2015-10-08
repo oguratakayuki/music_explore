@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007141037) do
+ActiveRecord::Schema.define(version: 20151008065152) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -45,14 +45,12 @@ ActiveRecord::Schema.define(version: 20151007141037) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "social_accounts", force: :cascade do |t|
+  create_table "movies", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "url",        limit: 255
     t.string   "provider",   limit: 255
-    t.string   "uid",        limit: 255
-    t.string   "name",       limit: 255
-    t.string   "info",       limit: 255
-    t.string   "token",      limit: 255
-    t.boolean  "expires",    limit: 1
-    t.datetime "expires_at"
+    t.integer  "artist_id",  limit: 4
+    t.integer  "track_id",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -63,6 +61,13 @@ ActiveRecord::Schema.define(version: 20151007141037) do
     t.date     "release_date"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "youtube_playlist_movies", force: :cascade do |t|
+    t.integer  "youtube_playlist_id", limit: 4
+    t.integer  "movie_id",            limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "youtube_playlist_tracks", force: :cascade do |t|
