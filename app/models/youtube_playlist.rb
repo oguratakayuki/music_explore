@@ -14,7 +14,9 @@ class YoutubePlaylist < ActiveRecord::Base
       debugger
       html.css('tr.pl-video').each do |tr|
         title = tr.data('title')
-        id = tr.data('video-id')
+        video_id = tr.data('video-id')
+        provider = 'youtube'
+        url = Youtube.url_for(video_id: video_id)
       end
 
     end
