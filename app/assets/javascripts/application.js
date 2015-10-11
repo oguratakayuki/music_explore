@@ -14,4 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require 'rest_in_place'
+//= require toastr
 //= require_tree .

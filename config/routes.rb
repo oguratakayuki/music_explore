@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :artists
+
+  resources :movies
+
   resources :youtube_playlists
 
   resources :itunes

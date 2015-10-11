@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @artist.title
+p
+  strong Description:
+  = @artist.description
+
+= link_to 'Edit', edit_artist_path(@artist)
+'|
+= link_to 'Back', artists_path

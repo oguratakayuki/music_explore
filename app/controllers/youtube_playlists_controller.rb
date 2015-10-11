@@ -25,13 +25,13 @@ class YoutubePlaylistsController < ApplicationController
   # POST /youtube_playlists.json
   def create
     @youtube_playlist = YoutubePlaylist.new(youtube_playlist_params)
-    debugger
 
     respond_to do |format|
       if @youtube_playlist.save
         format.html { redirect_to @youtube_playlist, notice: 'Youtube playlist was successfully created.' }
         format.json { render :show, status: :created, location: @youtube_playlist }
       else
+        debugger
         format.html { render :new }
         format.json { render json: @youtube_playlist.errors, status: :unprocessable_entity }
       end

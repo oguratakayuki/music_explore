@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @movie.title
+p
+  strong Artist:
+  = @movie.artist
+p
+  strong Track:
+  = @movie.track
+p
+  strong Provider:
+  = @movie.provider
+p
+  strong Url:
+  = @movie.url
+
+= link_to 'Edit', edit_movie_path(@movie)
+'|
+= link_to 'Back', movies_path

@@ -55,6 +55,18 @@ ActiveRecord::Schema.define(version: 20151008065152) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "social_accounts", force: :cascade do |t|
+    t.string   "provider",   limit: 255
+    t.string   "uid",        limit: 255
+    t.string   "name",       limit: 255
+    t.string   "info",       limit: 255
+    t.string   "token",      limit: 255
+    t.boolean  "expires",    limit: 1
+    t.datetime "expires_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "tracks", force: :cascade do |t|
     t.string   "title",        limit: 255
     t.text     "description",  limit: 65535

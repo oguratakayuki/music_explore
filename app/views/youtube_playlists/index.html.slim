@@ -1,18 +1,32 @@
 h1 Listing youtube_playlists
 
-table
+table.table.table-striped.table-hover
   thead
     tr
       th
+        | ファイル名
       th
+        | 動画数
       th
+        | 作成日
+      th
+        | 操作
 
   tbody
     - @youtube_playlists.each do |youtube_playlist|
       tr
-        td = link_to 'Show', youtube_playlist
-        td = link_to 'Edit', edit_youtube_playlist_path(youtube_playlist)
-        td = link_to 'Destroy', youtube_playlist, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td
+          = youtube_playlist.title
+        td
+          = youtube_playlist.movies.count
+        td
+          = youtube_playlist.created_at.to_s
+        td
+          = link_to 'Show', youtube_playlist
+          '
+          = link_to 'Edit', edit_youtube_playlist_path(youtube_playlist)
+          '
+          = link_to 'Destroy', youtube_playlist, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
